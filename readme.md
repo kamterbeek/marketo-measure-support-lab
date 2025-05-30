@@ -2,7 +2,7 @@
 
 Simulate a Marketo Measure-like environment locally using Docker and Kubernetes for testing common support issues.
 
-## Services
+## 🔧 Services
 
 - **CRM Mock Server** – Receives mock lead data
 - **Ad Source Mock** – Mimics ad tracking source (UTMs)
@@ -13,4 +13,6 @@ Simulate a Marketo Measure-like environment locally using Docker and Kubernetes 
 ### 1. Clone the Repository
 
 ```bash
+git clone https://github.com/kamterbeek./marketo-measure-support-lab.git
+cd marketo-measure-support-lab
 
