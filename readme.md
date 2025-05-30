@@ -12,7 +12,3 @@ Simulate a Marketo Measure-like environment locally using Docker and Kubernetes 
 
 ### 1. Clone the Repository
 
-```bash
-git clone https://github.com/kamterbeek./marketo-measure-support-lab.git
-cd marketo-measure-support-lab
-
