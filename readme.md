@@ -9,6 +9,3 @@ Simulate a Marketo Measure-like environment locally using Docker and Kubernetes 
 - **Postgres DB** – Logs ingested data and supports backend inspection
 
 ##Getting Started
-
-### 1. Clone the Repository
-
