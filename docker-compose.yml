@@ -1,0 +1,37 @@
+version: '3.8'
+
+services:
+  crm-mock:
+    image: node:18
+    container_name: crm-mock
+    working_dir: /app
+    volumes:
+      - ./scripts:/app/scripts
+    command: sh -c "npm install express && node scripts/crm-mock-server.js"
+    ports:
+      - "3001:3000"
+
+  ad-source-mock:
+    image: node:18
+    container_name: ad-source-mock
+    working_dir: /app
+    volumes:
+      - ./scripts:/app/scripts
+    command: sh -c "npm install express && node scripts/ad-source-mock-server.js"
+    ports:
+      - "3002:3000"
+
+  postgres:
+    image: postgres:15
+    container_name: support-postgres
+    environment:
+      POSTGRES_USER: support
+      POSTGRES_PASSWORD: support
+      POSTGRES_DB: marketo_support
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:
